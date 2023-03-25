@@ -8,7 +8,7 @@
                 </h1>
 <!--<form> element is a container for different types of input elements
     are text fields, checkboxes, radio buttons, submit buttons etc.,-->
-<form method="post">{% crsf_token %}
+<form method="post">{% csrf_token %}
 <label for="num1">Enter the value X:</label><br>
     <input type="text", id="num1", name="x"><br>
 <label for="num2">Enter your value Y:</label><br>
