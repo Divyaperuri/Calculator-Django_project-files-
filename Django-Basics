@@ -5,6 +5,75 @@ It was named after the famous gituarist Django
 Django is Completely back-end.
 Features: Excellent Documentation, Seo optimized , high scalability, security,versatile in nature
 Django works on "MVT- Model View Template"..
+                     url's
+Html/Css/Images                  Req/response                      
+Template --------------------------> View ------------------------> DB(Model-ORM-Object Relational Mapping)
 
-Tem
+By using the ORM Model ,we can simply perform easy to interact with the database than sql,plsql.....
+
+CURD(Create,Update,Read,Delete) Operations:
+Create ---> Post
+Read   ---> get
+Update ---> Put
+Delete ---> Delete
+
+*Open Anaconda
+*Create the Environment for particular project
+step-1:
+create a folder in system.
+step-2:
+open cmd in particular location
+step-3:
+activate your env using command "conda activate <env name>"
+step-4:
+pip install django
+step-5:
+create a project using command "django-admin startproject <project_name>"
+step-6:
+create a app using command "python manage.py startapp <app name>"
+step-7:
+config in settings.py
+*Configurations:
+*Configure the "app name" in INSTALLED APPS in settings.py
+*And create the templates folder in the folder
+*Then Import OS in settings.py
+*Import the code in templates : "DIRS":OS.path.join(BASE_DIR, "templates")
+step-8:
+For running the server using the command "python manage.py runserver"
+step-9:
+write a logic in views.py
+*from django.shortcuts import render
+*from django.http import HttpResponse
+*def demo(request):
+    return HttpResponse("calculator.html",)
+step-10:
+config the urls.py
+*path("demo/",demo)
+ config In Models.py
+ from django.db import models
+ class DemoModel(models.Model):
+  name=models.CharField(max_length=40)
+  address=models.CharField(max_length=40)
+  phone=models.IntegerField()
+  email=models.EmailField()
+ *After config ,we need to register this models.py in admin.py to reflect in back-end
+    from django.contrib import admin
+    from app1.models import DemoModel
+    #Register
+    admin.site.register(DemoModel)
+step-11:
+implement frontend (html)
+step-12:
+python manage.py migrate
+step-13
+python manage.py createsuperuser
+step-14
+python manage.py makemigrations
+
+
+
+
+
+
+
 
