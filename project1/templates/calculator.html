@@ -1,0 +1,31 @@
+<!Doctype html>
+<html>
+    <head> 
+        <title>Calculator</title> <!-- It will show the webpage name-->
+        <body style= "background-image: url('https://images.pexels.com/photos/6963017/pexels-photo-6963017.jpeg');"">
+            <h1 align= "center", style="height:40px; color:black">
+                <b>Calculator</b>
+                </h1>
+<!--<form> element is a container for different types of input elements
+    are text fields, checkboxes, radio buttons, submit buttons etc.,-->
+<form method="post">{% crsf_token %}
+<label for="num1">Enter the value X:</label><br>
+    <input type="text", id="num1", name="x"><br>
+<label for="num2">Enter your value Y:</label><br>
+    <input type="text", id="num2", name="y"><br>
+    <label>Select the Operator</label><br>
+    <select name="opr">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+        <option value="**">**</option>
+    </select><br>
+    <button type="submit">Calculate</button><br>
+    <input type="text", value="{{solution}}">
+</form>
+</body>
+</head>
+</html>
+
